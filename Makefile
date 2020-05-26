@@ -5,7 +5,7 @@ c4.o: c4.asm
 	yasm -Worphan-labels -g dwarf2 -f elf64 c4.asm -l c4.lst
 
 c4lib.o: c4lib.asm
-	yasm -Worphan-labels -g dwarf2 -f elf64 c4lib.asm -l c4.lst
+	yasm -Worphan-labels -g dwarf2 -f elf64 c4lib.asm -l c4lib.lst
 
 c4startc.o: c4startc.c
 	gcc -g -c -o c4startc.o c4startc.c
@@ -18,6 +18,7 @@ clean:
 	rm -f c4.o 
 	rm -f c4.lst
 	rm -f c4lib.o
+	rm -f c4lib.lst
 	rm -f c4startc.o
 	rm -f c4startc.asm 
 
